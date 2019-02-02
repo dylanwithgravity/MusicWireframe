@@ -30,7 +30,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tZf-P0-lwg">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tZf-P0-lwg" userLabel="Play Pause Background">
                                 <rect key="frame" x="152" y="398" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,6 +50,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ul-QY-aEk" userLabel="Play Pause Button">
                                         <rect key="frame" x="100.5" y="0.0" width="60" height="60"/>
                                         <state key="normal" image="pause"/>
+                                        <connections>
+                                            <action selector="playPauseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M0Q-fW-hUw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adq-US-Oav" userLabel="Forward Button">
                                         <rect key="frame" x="201" y="0.0" width="60" height="60"/>
@@ -69,6 +72,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="albumImageView" destination="4Fa-72-UK2" id="iTC-Dx-YfZ"/>
+                        <outlet property="forwardBackground" destination="06P-bF-usT" id="KlB-M8-taw"/>
+                        <outlet property="forwardButton" destination="adq-US-Oav" id="8ZG-p9-STc"/>
+                        <outlet property="playPauseBackground" destination="tZf-P0-lwg" id="Ldy-e5-g4k"/>
+                        <outlet property="playPauseButton" destination="8ul-QY-aEk" id="QX3-UD-y6n"/>
+                        <outlet property="reverseBackground" destination="ZAP-UU-mGe" id="TYe-wf-iK4"/>
+                        <outlet property="reverseButton" destination="kt3-cW-YPD" id="UdY-7P-iWY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
